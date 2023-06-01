@@ -13,11 +13,11 @@ function ProductDetail(){
         dispatch(getProductForId(id))
     }, [])
 
-    if(productDetail !== null) 
+    if(productDetail !== null) {
         return (
             <>
                 <Helmet>
-                    <title>Product Detail: {productDetail.title || ''}</title>
+                    <title>Product Detail: {productDetail.title || 'Product Detail'}</title>
                     <meta name="description" content={productDetail.description || ''} />
                     <link rel="canonical" href={`/items/${id}`} />
                 </Helmet>
@@ -44,6 +44,15 @@ function ProductDetail(){
                 </section>
             </>
         )
+    }
+    return (
+        <Helmet>
+            <title>Product Detail</title>
+            <meta name="description" content="Product Detail" />
+            <link rel="canonical" href={`/items/${id}`} />
+        </Helmet>
+    )
+        
 }
 
 export default ProductDetail
