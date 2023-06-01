@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 import Price from "../Price"
 
-function Product({productName, productPrice, productId, currency}:any) {
+function Product({productName, productPrice, productId, currency, productUrlImg}:any) {
     return (
       <div className="container-product">
             <div className="info-product">
-                <img src={`https://cdn.pixabay.com/photo/2014/01/22/19/38/boot-250012_1280.jpg`} alt={`iPhone`} />
+                <img src={productUrlImg} alt={productName} />
                 <div>
                     <Price price={productPrice} currency={currency} isLarge={false}/>
                     <p className="product-name">{productName}</p>

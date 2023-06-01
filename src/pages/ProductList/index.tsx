@@ -28,6 +28,7 @@ function ProductList() {
             <div className="container">
                 {productsList.map((item: any) => {
                     return <Product
+                    productUrlImg={item.picture}
                     key={item.id}
                     productName={item.title}
                     productPrice={item.price.amount}
