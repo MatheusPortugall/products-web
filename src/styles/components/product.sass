@@ -1,0 +1,103 @@
+@use '../variables'
+
+.container, .detail-container
+    background-color: variables.$white-color-01
+    margin: 15px 80px
+    border-radius: 8px
+    box-shadow: variables.$shadow
+    padding: 25px
+
+.container-product 
+    margin-top: 5px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding-bottom: 25px
+    border-bottom: 1px solid variables.$gray-color-02
+    .info-product 
+        display: flex
+        flex-direction: row
+        .product-name
+            margin-top: 8px
+        img
+            height: 140px
+            width: 140px
+            margin-right: 10px
+    .more-details
+        cursor: pointer
+        margin-top: 10px
+        .link
+            text-decoration: none
+            color: variables.$gray-color-02
+        .link:hover
+            transition: .3
+            color: variables.$gray-color-03
+
+.detail-container
+    display: flex
+    flex-direction: row
+    img 
+        height: 400px
+        width: 90%
+    .detail-product
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        width: 70%
+        .description-info
+            margin-top: 15px
+            .description-title
+                font-size: 18px
+                font-weight: 600
+            .description
+                margin-top: 8px
+    .sale-product
+        width: 30%
+        display: flex
+        flex-direction: column
+        align-items: right
+        .sold-quantity
+            margin: 10px 0px
+            color: variables.$gray-color-02
+        .sold-product-name
+            margin: 10px 0px
+            font-size: 18px
+            font-weight: 700
+        .sold-button
+            margin-top: 25px
+            border: none
+            background-color: variables.$blue-color-01
+            padding: 10px 0px
+            border-radius: 8px
+            color: variables.$white-color-01
+        .sold-button:hover
+            transition: .3
+            opacity: .6
+
+@media (max-width: 625px) 
+    .container-product
+        display: flex
+        flex-direction: column
+        .info-product
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                margin-bottom: 8px
+
+@media (max-width: 1090px) 
+    .detail-container
+        display: flex
+        flex-direction: column
+        .detail-product
+            width: 100%
+        .sale-product
+            width: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            .sold-button
+                width: 30%
+        

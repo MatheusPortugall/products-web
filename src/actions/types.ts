@@ -1,0 +1,5 @@
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const LIST_PRODUCTS = 'LIST_PRODUCTS'
+export const GET_PRODUCT_FOR_ID = 'GET_PRODUCT_FOR_ID'
+export const PRODUCT_FOR_ID = 'PRODUCT_FOR_ID'
+export const ERROR = 'ERROR'
