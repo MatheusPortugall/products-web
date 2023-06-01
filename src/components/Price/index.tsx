@@ -28,7 +28,7 @@ function Price({price, currency, isLarge}: any) {
         <div className="price-group">
             <div className="currency">{stringCurrency}</div>
             <div className="price">{priceList[0]}</div>
-            <div className="cents">{priceList[1]}</div>
+            <div className="cents">{priceList[1]}{priceList[1].length == 1 && '0'}</div>
         </div>
     )
 }
